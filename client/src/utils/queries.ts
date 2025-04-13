@@ -6,10 +6,13 @@ export const QUERY_USER = gql`
       _id
       username
       email
-      thoughts {
-        _id
-        thoughtText
-        createdAt
+      savedVideos {
+        videoId
+        creator
+        title
+        description
+        image
+        link
       }
     }
   }
