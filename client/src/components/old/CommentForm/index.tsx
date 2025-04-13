@@ -1,7 +1,7 @@
 import { useState, type FormEvent, type ChangeEvent } from 'react';
 import { useMutation } from '@apollo/client';
 
-import { ADD_COMMENT } from '../../utils/mutations';
+import { ADD_COMMENT } from '../../../utils/mutations';
 
 const CommentForm = ({ thoughtId }: any) => {
   const [commentText, setCommentText] = useState('');
