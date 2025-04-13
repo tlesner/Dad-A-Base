@@ -13,7 +13,7 @@ interface ThoughtListProps {
   title: string;
 }
 
-const ThoughtList: React.FC<ThoughtListProps> = ({ thoughts, title }) => {
+const VideoList: React.FC<ThoughtListProps> = ({ thoughts, title }) => {
   if (!thoughts.length) {
     return <h3>No Thoughts Yet</h3>;
   }
@@ -46,4 +46,4 @@ const ThoughtList: React.FC<ThoughtListProps> = ({ thoughts, title }) => {
   );
 };
 
-export default ThoughtList;
+export default VideoList;
