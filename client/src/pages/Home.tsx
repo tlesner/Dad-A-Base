@@ -1,7 +1,7 @@
 import { useQuery } from '@apollo/client';
 
-import ThoughtList from '../components/ThoughtList/index.tsx';
-import ThoughtForm from '../components/ThoughtForm/index.tsx';
+import ThoughtList from '../components/old/ThoughtList/index.tsx';
+import ThoughtForm from '../components/old/ThoughtForm/index.tsx';
 
 import { QUERY_THOUGHTS } from '../utils/queries.ts';
 
