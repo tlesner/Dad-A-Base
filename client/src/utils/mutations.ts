@@ -24,9 +24,9 @@ export const ADD_USER = gql`
 }
 `;
 
-export const ADD_THOUGHT = gql`
-  mutation AddThought($input: ThoughtInput!) {
-    addThought(input: $input) {
+export const SAVE_VIDEO = gql`
+  mutation SaveVideo($input: VideoInput!) {
+    saveVideo(input: $input) {
       _id
       thoughtText
       thoughtAuthor
@@ -38,4 +38,19 @@ export const ADD_THOUGHT = gql`
     }
   }
 `;
+
+// export const ADD_THOUGHT = gql`
+//   mutation AddThought($input: ThoughtInput!) {
+//     addThought(input: $input) {
+//       _id
+//       thoughtText
+//       thoughtAuthor
+//       createdAt
+//       comments {
+//         _id
+//         commentText
+//       }
+//     }
+//   }
+// `;
 
