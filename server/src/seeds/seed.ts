@@ -2,8 +2,8 @@ import db from '../config/connection.js';
 import { Thought, User } from '../models/index.js';
 import cleanDB from './cleanDB.js';
 
-import userData from './userData.json' assert { type: 'json'};
-import thoughtData from './thoughtData.json' assert { type: 'json' };
+import userData from './userData.json' with { type: 'json'};
+import thoughtData from './thoughtData.json' with { type: 'json' };
 
 const seedDatabase = async (): Promise<void> => {
   try {
