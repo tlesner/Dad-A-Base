@@ -2,9 +2,9 @@
   "name": "main",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server/server.js",
   "scripts": {
-    "start": "node server/server.js",
+    "start": "node server/dist/server.js",
     "start:dev": "concurrently \"cd server && npm run watch\" \"wait-on tcp:3001 && cd client && npm run dev\"",
     "server": "cd server && npm start",
     "server:dev": "cd server && npm run dev",
