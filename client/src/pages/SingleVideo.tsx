@@ -1,8 +1,10 @@
+//TODO: Instead of a page, create a modal and have a button to favorite/unfavorte the video!
+
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 
-import CommentList from '../components/old/CommentList/index.tsx';
-import CommentForm from '../components/old/CommentForm/index.tsx';
+// import CommentList from '../components/old/CommentList/index.tsx';
+// import CommentForm from '../components/old/CommentForm/index.tsx';
 
 import { QUERY_SINGLE_THOUGHT } from '../utils/queries.ts';
 
@@ -40,12 +42,12 @@ const SingleThought = () => {
         </blockquote>
       </div>
 
-      <div className="my-5">
+      {/* <div className="my-5">
         <CommentList comments={thought.comments} />
       </div>
       <div className="m-3 p-4" style={{ border: '1px dotted #1a1a1a' }}>
         <CommentForm thoughtId={thought._id} />
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -2,10 +2,17 @@
   "name": "main",
   "version": "1.0.0",
   "description": "",
+<<<<<<< HEAD
   "main": "dist/server.js",
   "scripts": {
     "start": "node server/dist/server.js",
     "start:dev": "concurrently \"cd server && npm run watch\" \"wait-on tcp:3001 && cd client && npm run dev\"",
+=======
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/dist/server.js",
+    "start:dev": "concurrently \"cd server && npm run watch\" \"cd client && npm run dev\"",
+>>>>>>> 7370306aee4396b5b0abcebe9e831685d5f5cb6a
     "server": "cd server && npm start",
     "server:dev": "cd server && npm run dev",
     "install": "cd server && npm i && cd ../client && npm i",

@@ -7,6 +7,15 @@ import { expressMiddleware } from '@apollo/server/express4';
 import { typeDefs, resolvers } from './schemas/index.js';
 import { authenticateToken } from './utils/auth.js';
 
+import { fileURLToPath } from 'url';
+import dotenv from 'dotenv';
+
+dotenv.config();
+const app = express();
+const PORT = process.env.PORT || 3001;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 const server = new ApolloServer({
   typeDefs,
   resolvers
@@ -14,10 +23,10 @@ const server = new ApolloServer({
 
 const startApolloServer = async () => {
   await server.start();
-  await db();
+  await db;
 
-  const PORT = process.env.PORT || 3001;
-  const app = express();
+  // const PORT = process.env.PORT || 3001;
+  // const app = express();
 
   app.use(express.urlencoded({ extended: false }));
   app.use(express.json());
