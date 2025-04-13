@@ -1,58 +1,45 @@
 const typeDefs = `
-  type User {
-    _id: ID
-    username: String
-    email: String
-    password: String
-    thoughts: [Thought]!
-  }
-
-  type Thought {
-    _id: ID
-    thoughtText: String
-    thoughtAuthor: String
-    createdAt: String
-    comments: [Comment]!
-  }
-
-  type Comment {
-    _id: ID
-    commentText: String
-    createdAt: String
-  }
-
-  input ThoughtInput {
-    thoughtText: String!
-    thoughtAuthor: String!
-  }
-
-  input UserInput {
+    type User {
+    _id: ID!
     username: String!
     email: String!
-    password: String!
-  }
-  
-  type Auth {
+    videoCount: Int
+    savedVideos: [Video]
+    }
+
+    type Video {
+    videoId: String!
+    creator: String!
+    description: String!
+    title: String!
+    image: String
+    link: String
+    }
+
+    type Auth {
     token: ID!
     user: User
-  }
+    }
 
-  type Query {
-    users: [User]
-    user(username: String!): User
-    thoughts: [Thought]!
-    thought(thoughtId: ID!): Thought
+    input VideoSave {
+        creator: String!
+        description: String!
+        title: String!
+        videoId: String!
+        image: String
+        link: String
+    }
+    
+    type Query {
     me: User
-  }
+    }
 
-  type Mutation {
-    addUser(input: UserInput!): Auth
+    type Mutation {
     login(email: String!, password: String!): Auth
-    addThought(input: ThoughtInput!): Thought
-    addComment(thoughtId: ID!, commentText: String!): Thought
-    removeThought(thoughtId: ID!): Thought
-    removeComment(thoughtId: ID!, commentId: ID!): Thought
-  }
+    addUser(username: String!, email: String!, password: String!): Auth
+    saveVideo(videoData: VideoSave!): User
+    removeVideo(videoId: ID!): User
+    }
 `;
 
 export default typeDefs;

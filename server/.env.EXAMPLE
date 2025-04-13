@@ -1,2 +1,0 @@
-MONGODB_URI='mongodb://127.0.0.1:27017/tech-thoughts'
-JWT_SECRET_KEY='mysecretshhh'
