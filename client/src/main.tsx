@@ -6,7 +6,7 @@ import App from './App.jsx';
 import Home from './pages/Home';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
-import SingleThought from './pages/SingleVideo.js';
+import SingleVideo from './pages/SingleVideo.js';
 import Profile from './pages/UserFavorites.js';
 import ErrorPage from './pages/Error';
 
@@ -32,8 +32,8 @@ const router = createBrowserRouter([
         path: '/me',
         element: <Profile />
       }, {
-        path: '/thoughts/:thoughtId',
-        element: <SingleThought />
+        path: '/videos/:videoId',
+        element: <SingleVideo />
       }
     ]
   },

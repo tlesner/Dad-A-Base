@@ -1,13 +1,18 @@
 import { useQuery } from '@apollo/client';
 
-import ThoughtList from '../components/VideoList/index.tsx';
+import VideoList from '../components/VideoList/index.tsx';
 // import ThoughtForm from '../components/old/ThoughtForm/index.tsx';
 
-import { QUERY_THOUGHTS } from '../utils/queries.ts';
+import { QUERY_VIDEOS } from '../utils/queries.ts';
 
 const Home = () => {
-  const { loading, data } = useQuery(QUERY_THOUGHTS);
-  const thoughts = data?.thoughts || [];
+  const { loading, data } = useQuery(QUERY_VIDEOS);
+
+  console.log(data)
+  
+  const videos = data?.videos || [];
+
+  console.log(videos)
 
   return (
     <main>
@@ -22,8 +27,8 @@ const Home = () => {
           {loading ? (
             <div>Loading...</div>
           ) : (
-            <ThoughtList
-              thoughts={thoughts}
+            <VideoList
+              videos={videos}
               title="Some Feed for Thought(s)..."
             />
           )}
