@@ -7,7 +7,7 @@ import videoData from './videoData.json' with { type: 'json' };
 
 const seedDatabase = async (): Promise<void> => {
   try {
-    await db();
+    await db;
     await cleanDB();
 
     await Video.insertMany(videoData);
