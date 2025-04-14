@@ -8,12 +8,12 @@ const typeDefs = `
     }
 
     type Video {
-    videoId: String!
+    video_Id: ID!
     creator: String!
     description: String!
     title: String!
     image: String
-    link: String
+    url: String
     }
 
     type Auth {
@@ -25,13 +25,14 @@ const typeDefs = `
         creator: String!
         description: String!
         title: String!
-        videoId: String!
+        video_Id: ID!
         image: String
         link: String
     }
     
     type Query {
     me: User
+    videos: [Video]
     }
 
     type Mutation {
