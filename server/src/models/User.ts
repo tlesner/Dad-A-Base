@@ -12,7 +12,7 @@ export interface UserDocument extends Document {
   password: string;
   savedVideos: VideoDocument[];
   isCorrectPassword(password: string): Promise<boolean>;
-  bookCount: number;
+  videoCount: number;
 }
 
 // Define the schema for the User document
