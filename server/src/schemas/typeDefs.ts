@@ -8,6 +8,7 @@ const typeDefs = gql`
     videoCount: Int
     savedVideos: [Video]
   }
+  }
 
   type Video {
     videoId: String!
@@ -32,15 +33,6 @@ const typeDefs = gql`
     user: User
   }
 
-  input VideoSave {
-    creator: String!
-    description: String!
-    title: String!
-    videoId: String!
-    image: String
-    link: String
-  }
-
   input UserInput {
     username: String!
     email: String!
@@ -49,14 +41,14 @@ const typeDefs = gql`
 
   type Query {
     me: User
-    videos: [Video]!
+    videos: [Video]
     users: [User]
     user(username: String!): User
   }
 
   type Mutation {
     login(email: String!, password: String!): Auth
-    addUser(input: UserInput!): Auth
+     addUser(input: UserInput!): Auth
     saveVideo(videoData: VideoSave!): User
     removeVideo(videoId: ID!): User
   }
