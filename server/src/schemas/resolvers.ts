@@ -30,7 +30,7 @@ const resolvers = {
 			}
 			throw new AuthenticationError('Not Authenticated');
 		},
-		video: async (_parent: any, _args: any) => {
+		videos: async () => {
 			return await Video.find();
 		},
 	},
