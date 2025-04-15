@@ -8,7 +8,6 @@ const typeDefs = gql`
     videoCount: Int
     savedVideos: [Video]
   }
-  }
 
   type Video {
     videoId: String!
