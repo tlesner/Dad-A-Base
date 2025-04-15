@@ -1,19 +1,21 @@
+//TODO: Instead of a page, create a modal and have a button to favorite/unfavorte the video!
+
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 
-import CommentList from '../components/old/CommentList/index.tsx';
-import CommentForm from '../components/old/CommentForm/index.tsx';
+// import CommentList from '../components/old/CommentList/index.tsx';
+// import CommentForm from '../components/old/CommentForm/index.tsx';
 
-import { QUERY_SINGLE_THOUGHT } from '../utils/queries.ts';
+import { QUERY_SINGLE_VIDEO } from '../utils/queries.ts';
 
-const SingleThought = () => {
-  const { thoughtId } = useParams();
+const SingleVideo = () => {
+  const { videoId } = useParams();
 
-  const { loading, data } = useQuery(QUERY_SINGLE_THOUGHT, {
-    variables: { thoughtId: thoughtId },
+  const { loading, data } = useQuery(QUERY_SINGLE_VIDEO, {
+    variables: { videoId: videoId },
   });
 
-  const thought = data?.thought || {};
+  const video = data?.video || {};
 
   if (loading) {
     return <div>Loading...</div>;
@@ -21,10 +23,10 @@ const SingleThought = () => {
   return (
     <div className="my-3">
       <h3 className="card-header bg-dark text-light p-2 m-0">
-        {thought.thoughtAuthor} <br />
-        <span style={{ fontSize: '1rem' }}>
-          had this thought on {new Date(Number(thought.createdAt)).toLocaleString()}
-        </span>
+        {video.creator} <br />
+        {/* <span style={{ fontSize: '1rem' }}>
+          had this thought on {new Date(Number(video.createdAt)).toLocaleString()}
+        </span> */}
       </h3>
       <div className="bg-light py-4">
         <blockquote
@@ -36,18 +38,18 @@ const SingleThought = () => {
             lineHeight: '1.5',
           }}
         >
-          {thought.thoughtText}
+          {video.title}
         </blockquote>
       </div>
 
-      <div className="my-5">
+      {/* <div className="my-5">
         <CommentList comments={thought.comments} />
       </div>
       <div className="m-3 p-4" style={{ border: '1px dotted #1a1a1a' }}>
         <CommentForm thoughtId={thought._id} />
-      </div>
+      </div> */}
     </div>
   );
 };
 
-export default SingleThought;
+export default SingleVideo;

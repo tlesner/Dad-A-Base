@@ -1,4 +1,4 @@
-import { gql } from 'apollo-server-express';
+import { gql } from "apollo-server-express";
 
 const typeDefs = gql`
   type User {
@@ -32,18 +32,33 @@ const typeDefs = gql`
     user: User
   }
 
+  input VideoSave {
+    creator: String!
+    description: String!
+    title: String!
+    videoId: String!
+    image: String
+    link: String
+  }
+
+  input UserInput {
+    username: String!
+    email: String!
+    password: String!
+  }
+
   type Query {
     me: User
+    videos: [Video]!
     users: [User]
     user(username: String!): User
-    videos: [Video]
   }
 
   type Mutation {
     login(email: String!, password: String!): Auth
-    addUser(username: String!, email: String!, password: String!): Auth
+     addUser(input: UserInput!): Auth
     saveVideo(videoData: VideoSave!): User
-    removeVideo(videoId: String!): User
+    removeVideo(videoId: ID!): User
   }
 `;
 

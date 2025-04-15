@@ -1,8 +1,11 @@
+//TODO: User Favorite Videos - have list of videos + tags to filter by
+//TODO: Use video modal popup when clicking on a video from the list
+
 import { Navigate, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 
-import ThoughtForm from '../components/old/ThoughtForm';
-import ThoughtList from '../components/old/ThoughtList';
+// import ThoughtForm from '../components/old/ThoughtForm';
+import VideoList from '../components/VideoList';
 
 import { QUERY_USER, QUERY_ME } from '../utils/queries';
 
@@ -44,19 +47,19 @@ const Profile = () => {
         </h2>
 
         <div className="col-12 col-md-10 mb-5">
-          <ThoughtList
-            thoughts={user.thoughts}
-            title={`${user.username}'s thoughts...`}
+          <VideoList
+            videos={user.videos}
+            title={`${user.username}'s videos...`}
           />
         </div>
-        {!userParam && (
+        {/* {!userParam && (
           <div
             className="col-12 col-md-10 mb-3 p-3"
             style={{ border: '1px dotted #1a1a1a' }}
           >
             <ThoughtForm />
           </div>
-        )}
+        )} */}
       </div>
     </div>
   );

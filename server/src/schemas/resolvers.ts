@@ -1,6 +1,7 @@
-import { AuthenticationError } from "apollo-server";
-import User from "../models/User.js";
-import { signToken } from "../utils/auth.js";
+import { AuthenticationError } from 'apollo-server';
+import User from '../models/User.js';
+import { Video } from '../models/Video.js';
+import { signToken } from '../utils/auth.js';
 
 interface IUserContext {
   user: {
@@ -36,6 +37,14 @@ interface RemoveVideoArgs {
   videoId: string;
 }
 
+interface AddUserInput {
+	input: {
+		username: string;
+		email: string;
+		password: string;
+	};
+}
+
 const resolvers = {
   Query: {
     me: async (_parent: any, _args: any, context: IUserContext) => {
@@ -49,7 +58,10 @@ const resolvers = {
         console.error("Failed to fetch user data:", error);
         throw new Error("Failed to retrieve user information");
       }
-    },
+          },
+    video: async (_parent: any, _args: any) => {
+			return await Video.find();
+		},
   },
 
   Mutation: {
@@ -68,10 +80,11 @@ const resolvers = {
       }
     },
 
-    addUser: async (_parent: any, { username, email, password }: RegisterArgs) => {
+    addUser: async (_parent: any, { input }: AddUserInput) => {
       try {
+        const { username, email, password } = input;
         const existing = await User.findOne({ email });
-        if (existing) {
+                if (existing) {
           console.warn("Registration attempt with existing email:", email);
           throw new AuthenticationError("Email is already in use");
         }

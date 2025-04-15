@@ -1,29 +1,34 @@
 import { useQuery } from '@apollo/client';
 
-import ThoughtList from '../components/old/ThoughtList/index.tsx';
-import ThoughtForm from '../components/old/ThoughtForm/index.tsx';
+import VideoList from '../components/VideoList/index.tsx';
+// import ThoughtForm from '../components/old/ThoughtForm/index.tsx';
 
-import { QUERY_THOUGHTS } from '../utils/queries.ts';
+import { QUERY_VIDEOS } from '../utils/queries.ts';
 
 const Home = () => {
-  const { loading, data } = useQuery(QUERY_THOUGHTS);
-  const thoughts = data?.thoughts || [];
+  const { loading, data } = useQuery(QUERY_VIDEOS);
+
+  console.log(data)
+  
+  const videos = data?.videos || [];
+
+  console.log(videos)
 
   return (
     <main>
       <div className="flex-row justify-center">
-        <div
+        {/* <div
           className="col-12 col-md-10 mb-3 p-3"
           style={{ border: '1px dotted #1a1a1a' }}
         >
-          <ThoughtForm />
-        </div>
+           <ThoughtForm />
+        </div> */}
         <div className="col-12 col-md-8 mb-3">
           {loading ? (
             <div>Loading...</div>
           ) : (
-            <ThoughtList
-              thoughts={thoughts}
+            <VideoList
+              videos={videos}
               title="Some Feed for Thought(s)..."
             />
           )}
