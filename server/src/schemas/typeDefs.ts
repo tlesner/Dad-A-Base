@@ -17,7 +17,7 @@ const typeDefs = `
     }
 
     type Auth {
-    token: ID!
+    token: String
     user: User
     }
 
@@ -29,16 +29,23 @@ const typeDefs = `
         image: String
         link: String
     }
+
+    input UserInput {
+        username: String!
+        email: String!
+        password: String!
+    }
     
     type Query {
-    me: User
+        me: User
+        videos: [Video]!
     }
 
     type Mutation {
-    login(email: String!, password: String!): Auth
-    addUser(username: String!, email: String!, password: String!): Auth
-    saveVideo(videoData: VideoSave!): User
-    removeVideo(videoId: ID!): User
+        login(email: String!, password: String!): Auth
+        addUser(input: UserInput!): Auth
+        saveVideo(videoData: VideoSave!): User
+        removeVideo(videoId: ID!): User
     }
 `;
 
