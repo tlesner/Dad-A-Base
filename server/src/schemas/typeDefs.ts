@@ -32,7 +32,7 @@ const typeDefs = `
     
     type Query {
     me: User
-    videos: [Video]
+    videos: [Video]!
     }
 
     type Mutation {
