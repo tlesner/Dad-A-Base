@@ -1,19 +1,27 @@
 import { useQuery } from '@apollo/client';
-
+import React, { useState } from 'react';
 import VideoList from '../components/VideoList/index.tsx';
 // import ThoughtForm from '../components/old/ThoughtForm/index.tsx';
 
 import { QUERY_VIDEOS } from '../utils/queries.ts';
 
-const Home = () => {
+const Home: React.FC = () => {
   const { loading, data } = useQuery(QUERY_VIDEOS);
-
   console.log(data)
   
   const videos = data?.videos || [];
-
   console.log(videos)
 
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(e.target.value);
+  };
+
+  const filteredVideos = videos.filter((video: any) =>
+  video.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+  
   return (
     <main>
       <div className="flex-row justify-center">
