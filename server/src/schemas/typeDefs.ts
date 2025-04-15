@@ -32,15 +32,6 @@ const typeDefs = gql`
     user: User
   }
 
-  input VideoSave {
-    creator: String!
-    description: String!
-    title: String!
-    videoId: String!
-    image: String
-    link: String
-  }
-
   input UserInput {
     username: String!
     email: String!
@@ -49,7 +40,7 @@ const typeDefs = gql`
 
   type Query {
     me: User
-    videos: [Video]!
+    videos: [Video]
     users: [User]
     user(username: String!): User
   }
