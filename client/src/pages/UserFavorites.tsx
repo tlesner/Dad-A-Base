@@ -5,7 +5,7 @@ import { Navigate, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 
 // import ThoughtForm from '../components/old/ThoughtForm';
-// import ThoughtList from '../components/VideoList';
+import VideoList from '../components/VideoList';
 
 import { QUERY_USER, QUERY_ME } from '../utils/queries';
 
@@ -46,10 +46,10 @@ const Profile = () => {
           Viewing {userParam ? `${user.username}'s` : 'your'} profile.
         </h2>
 
-        {/* <div className="col-12 col-md-10 mb-5">
-          <ThoughtList
-            thoughts={user.thoughts}
-            title={`${user.username}'s thoughts...`}
+        <div className="col-12 col-md-10 mb-5">
+          <VideoList
+            videos={user.videos}
+            title={`${user.username}'s videos...`}
           />
         </div> */}
         {/* {!userParam && (

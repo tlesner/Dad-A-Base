@@ -15,11 +15,11 @@ export const LOGIN_USER = gql`
 export const ADD_USER = gql`
 	mutation Mutation($input: UserInput!) {
 		addUser(input: $input) {
-			user {
-				username
-				_id
-			}
 			token
+			user {
+				_id
+				username
+			}
 		}
 	}
 `;
@@ -35,11 +35,11 @@ export const SAVE_VIDEO = gql`
 				videoId
 				creator
 				title
-        description
-        image
-        link
+				description
+				image
+				link
 			}
-      videoCount
+			videoCount
 		}
 	}
 `;

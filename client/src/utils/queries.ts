@@ -20,7 +20,7 @@ export const QUERY_USER = gql`
 
 export const QUERY_VIDEOS = gql`
   query getVideos {
-    Video {
+    video {
       videoId
       creator
       description
