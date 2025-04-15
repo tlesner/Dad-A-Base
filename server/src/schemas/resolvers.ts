@@ -16,11 +16,11 @@ interface LoginArgs {
   password: string;
 }
 
-interface RegisterArgs {
-  username: string;
-  email: string;
-  password: string;
-}
+// interface RegisterArgs {
+//   username: string;
+//   email: string;
+//   password: string;
+// }
 
 interface SaveVideoArgs {
   videoData: {
@@ -59,7 +59,7 @@ const resolvers = {
         throw new Error("Failed to retrieve user information");
       }
           },
-    video: async (_parent: any, _args: any) => {
+    videos: async (_parent: any, _args: any) => {
 			return await Video.find();
 		},
   },
