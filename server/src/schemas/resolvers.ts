@@ -1,5 +1,6 @@
 import { AuthenticationError } from 'apollo-server';
 import User from '../models/User.js';
+import { Video } from '../models/Video.js';
 import { signToken } from '../utils/auth.js';
 
 interface IUserContext {
@@ -8,6 +9,14 @@ interface IUserContext {
 		email: string | null;
 		_id: string | null;
 	} | null;
+}
+
+interface AddUserInput {
+	input: {
+		username: string;
+		email: string;
+		password: string;
+	};
 }
 
 const resolvers = {
@@ -20,6 +29,9 @@ const resolvers = {
 				);
 			}
 			throw new AuthenticationError('Not Authenticated');
+		},
+		video: async (_parent: any, _args: any) => {
+			return await Video.find();
 		},
 	},
 
@@ -37,14 +49,18 @@ const resolvers = {
 		},
 		addUser: async (
 			_parent: unknown,
-			{
-				username,
-				email,
-				password,
-			}: { username: string; email: string; password: string }
+			// {
+			// 	username,
+			// 	email,
+			// 	password,
+			// }: { username: string; email: string; password: string }
+			{ input }: AddUserInput
 		) => {
+			const { username, email, password } = input;
 			const user = await User.create({ username, email, password });
+			console.log('User: ', user);
 			const token = signToken(user.username, user.email, user._id);
+			console.log('Token: ', token);
 			return { token, user };
 		},
 
