@@ -1,6 +1,3 @@
-//TODO: User Favorite Videos - have list of videos + tags to filter by
-//TODO: Use video modal popup when clicking on a video from the list
-
 import { Navigate, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { useState } from 'react';
@@ -55,7 +52,7 @@ console.log('user: ', user);
 		// setShowModal(false);
 	};
 
-const tags = [''];
+const tags = ['DIY', 'Auto', 'Cooking', 'Finance'];
 const filteredVideos = selectedTag ? user.savedVideos.filter((video: any) => video.tags?.includes(selectedTag)) : user.savedVideos;
 	
 return (
