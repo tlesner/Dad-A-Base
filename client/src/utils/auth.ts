@@ -5,7 +5,7 @@ interface ExtendedJwt extends JwtPayload {
   data:{
     username:string,
     email:string,
-    id:string
+    _id:string
   }
 };
 
