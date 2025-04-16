@@ -1,122 +1,194 @@
 [
   {
     "videoId": "vid001",
-    "creator": "LifeMentorTV",
-    "title": "How to Believe in Yourself",
-    "description": "Learn to build confidence and self-worth, even without parental support.",
-    "image": "https://example.com/thumbnails/confidence.jpg",
-    "link": "https://www.youtube.com/watch?v=u7KiAMdGquU"
+    "creator": "Dad, How Do I?",
+    "title": "How to Tie a Tie",
+    "description": "Step-by-step instructions on tying a tie for formal occasions.",
+    "image": "https://i.ytimg.com/vi/TATblk1LUQI/hqdefault.jpg",
+    "link": "https://www.youtube.com/watch?v=TATblk1LUQI"
   },
   {
     "videoId": "vid002",
-    "creator": "StrongRoots",
-    "title": "Dealing with Loneliness",
-    "description": "Understand loneliness and healthy ways to cope with it as a young person.",
-    "image": "https://example.com/thumbnails/loneliness.jpg",
-    "link": "https://youtube.com/watch?v=vid002"
+    "creator": "Dad, How Do I?",
+    "title": "How to Shave Your Face",
+    "description": "A beginner's guide to shaving your face safely and effectively.",
+    "image": "https://i.ytimg.com/vi/vYurKVxFXPI/hqdefault.jpg",
+    "link": "https://www.youtube.com/watch?v=vYurKVxFXPI"
   },
   {
     "videoId": "vid003",
-    "creator": "FutureFirst",
-    "title": "Budgeting Basics for Teens",
-    "description": "Learn how to manage money smartly from a young age.",
-    "image": "https://example.com/thumbnails/budgeting.jpg",
-    "link": "https://youtube.com/watch?v=vid003"
+    "creator": "Dad, How Do I?",
+    "title": "How to Change a Tire",
+    "description": "Instructions on changing a flat tire quickly and safely.",
+    "image": "https://i.ytimg.com/vi/0KDMdYww4VE/hqdefault.jpg",
+    "link": "https://www.youtube.com/watch?v=0KDMdYww4VE"
   },
   {
     "videoId": "vid004",
-    "creator": "DailyHope",
-    "title": "What Makes You Valuable",
-    "description": "Understanding your self-worth even without family validation.",
-    "image": "https://example.com/thumbnails/value.jpg",
-    "link": "https://youtube.com/watch?v=vid004"
+    "creator": "Dad, How Do I?",
+    "title": "How to Jump Start a Car",
+    "description": "Learn how to safely jump start a car with a dead battery.",
+    "image": "https://i.ytimg.com/vi/z0QZNrX8fxI/hqdefault.jpg",
+    "link": "https://www.youtube.com/watch?v=z0QZNrX8fxI"
   },
   {
     "videoId": "vid005",
-    "creator": "NextStep Network",
-    "title": "Foster Care 101: What You Need to Know",
-    "description": "If you’re in or entering foster care, this guide will help you understand your rights and options.",
-    "image": "https://example.com/thumbnails/foster.jpg",
-    "link": "https://youtube.com/watch?v=vid005"
+    "creator": "Dad Advice From Bo",
+    "title": "Changing a Car Tire",
+    "description": "Bo demonstrates how to change a flat tire quickly and safely.",
+    "image": "https://i.ytimg.com/vi/bInihYJPtEU/hqdefault.jpg",
+    "link": "https://www.youtube.com/watch?v=bInihYJPtEU"
   },
   {
     "videoId": "vid006",
-    "creator": "BrightPath",
-    "title": "Learning to Cook Simple Meals",
-    "description": "A beginner’s guide to making easy, healthy meals for yourself.",
-    "image": "https://example.com/thumbnails/cooking.jpg",
-    "link": "https://youtube.com/watch?v=vid006"
+    "creator": "Dad Advice From Bo",
+    "title": "Budgeting Basics",
+    "description": "Learn how to create a simple budget to manage your finances.",
+    "image": "https://i.ytimg.com/vi/9x5M6x6f4MB/hqdefault.jpg",
+    "link": "https://www.youtube.com/watch?v=9x5M6x6f4MB"
   },
   {
     "videoId": "vid007",
-    "creator": "ResilientYouth",
-    "title": "Staying Motivated in School Without Parental Support",
-    "description": "Tips for staying on track academically when you're on your own.",
-    "image": "https://example.com/thumbnails/study.jpg",
-    "link": "https://youtube.com/watch?v=vid007"
+    "creator": "Dad Advice From Bo",
+    "title": "How to Change Oil",
+    "description": "Step-by-step guide on changing your car's oil.",
+    "image": "https://i.ytimg.com/vi/6Y1IgYYLeE8/hqdefault.jpg",
+    "link": "https://www.youtube.com/watch?v=6Y1IgYYLeE8"
   },
   {
     "videoId": "vid008",
-    "creator": "KindMind",
-    "title": "Therapy Without a Therapist",
-    "description": "Mental health tools for kids without access to professional help.",
-    "image": "https://example.com/thumbnails/selftherapy.jpg",
-    "link": "https://youtube.com/watch?v=vid008"
+    "creator": "Dad Advice From Bo",
+    "title": "How to Tie a Tie",
+    "description": "Learn how to tie a tie with Bo's easy instructions.",
+    "image": "https://i.ytimg.com/vi/TATblk1LUQI/hqdefault.jpg",
+    "link": "https://www.youtube.com/watch?v=TATblk1LUQI"
   },
   {
     "videoId": "vid009",
-    "creator": "GrowthGuides",
-    "title": "How to Set Goals and Achieve Them",
-    "description": "Step-by-step guide to achieving big dreams, one small step at a time.",
-    "image": "https://example.com/thumbnails/goals.jpg",
-    "link": "https://youtube.com/watch?v=vid009"
+    "creator": "How to Dad",
+    "title": "How to Hold a Baby",
+    "description": "A humorous yet informative guide on holding a baby correctly.",
+    "image": "https://i.ytimg.com/vi/F-kHBU28CTQ/hqdefault.jpg",
+    "link": "https://www.youtube.com/watch?v=F-kHBU28CTQ"
   },
   {
     "videoId": "vid010",
-    "creator": "SoulFuel",
-    "title": "Finding Your Support System",
-    "description": "How to build strong relationships with mentors, teachers, and friends.",
-    "image": "https://example.com/thumbnails/support.jpg",
-    "link": "https://youtube.com/watch?v=vid010"
+    "creator": "How to Dad",
+    "title": "How to Get a Toddler to Eat",
+    "description": "Creative strategies to encourage toddlers to eat their meals.",
+    "image": "https://i.ytimg.com/vi/NEi5B7mB3fE/hqdefault.jpg",
+    "link": "https://www.youtube.com/watch?v=NEi5B7mB3fE"
   },
   {
     "videoId": "vid011",
-    "creator": "UpliftU",
-    "title": "Journaling to Understand Yourself",
-    "description": "Using writing as a tool for healing and clarity.",
-    "image": "https://example.com/thumbnails/journaling.jpg",
-    "link": "https://youtube.com/watch?v=vid011"
+    "creator": "How to Dad",
+    "title": "How to Put a Baby to Sleep",
+    "description": "Tips and tricks for getting your baby to sleep peacefully.",
+    "image": "https://i.ytimg.com/vi/UiHrA1Si0Gw/hqdefault.jpg",
+    "link": "https://www.youtube.com/watch?v=UiHrA1Si0Gw"
   },
   {
     "videoId": "vid012",
-    "creator": "BrightSide Academy",
-    "title": "Handling Anger in Healthy Ways",
-    "description": "Learn how to manage anger when life feels unfair.",
-    "image": "https://example.com/thumbnails/anger.jpg",
-    "link": "https://youtube.com/watch?v=vid012"
+    "creator": "How to Dad",
+    "title": "How to Change a Diaper",
+    "description": "A step-by-step guide on changing your baby's diaper.",
+    "image": "https://i.ytimg.com/vi/CAPjF-RCpro/hqdefault.jpg",
+    "link": "https://www.youtube.com/watch?v=CAPjF-RCpro"
   },
   {
     "videoId": "vid013",
-    "creator": "CareCoach",
-    "title": "Interview Tips for Teens",
-    "description": "How to land a part-time job even if you're nervous.",
-    "image": "https://example.com/thumbnails/interview.jpg",
-    "link": "https://youtube.com/watch?v=vid013"
+    "creator": "Mom, How Do I?",
+    "title": "How to Fold a Fitted Sheet",
+    "description": "Learn the step-by-step process to neatly fold a fitted sheet.",
+    "image": "https://i.ytimg.com/vi/8coUh0krmWY/hqdefault.jpg",
+    "link": "https://www.youtube.com/watch?v=8coUh0krmWY"
   },
   {
     "videoId": "vid014",
-    "creator": "SelfStarter",
-    "title": "DIY Laundry & Cleaning Basics",
-    "description": "Housekeeping 101 for kids and teens living independently.",
-    "image": "https://example.com/thumbnails/chores.jpg",
-    "link": "https://youtube.com/watch?v=vid014"
+    "creator": "Mom, How Do I?",
+    "title": "How to Deal with a Headache",
+    "description": "Tips and remedies to alleviate common headaches.",
+    "image": "https://i.ytimg.com/vi/wUWcyfIQJqM/hqdefault.jpg",
+    "link": "https://www.youtube.com/watch?v=wUWcyfIQJqM"
   },
   {
     "videoId": "vid015",
-    "creator": "EduBoost",
-    "title": "Applying for College Without Family Help",
-    "description": "Step-by-step college applications for independent students.",
-    "image": "https://example.com/thumbnails/college.jpg",
-    "link": "https://youtube.com/watch?v=vid015"
+    "creator": "Mom, How Do I?",
+    "title": "How to Make a Doctor’s Appointment",
+    "description": "A guide on scheduling and preparing for a doctor's visit.",
+    "image": "https://i.ytimg.com/vi/ICZSruAEwzU/hqdefault.jpg",
+    "link": "https://www.youtube.com/watch?v=ICZSruAEwzU"
+  },
+  {
+    "videoId": "vid016",
+    "creator": "Mom, How Do I?",
+    "title": "Basic Cooking and Cleaning Tips",
+    "description": "Essential cooking and cleaning tips for everyday life.",
+    "image": "https://i.ytimg.com/vi/PLZX_Af1fV4/hqdefault.jpg",
+    "link": "https://www.youtube.com/watch?v=PLZX_Af1fV4"
+  },
+  {
+    "videoId": "vid017",
+    "creator": "Mom, How Do I?",
+    "title": "Sewing Basics: How to Sew on a Button",
+    "description": "Learn the basics of sewing, starting with attaching a button.",
+    "image": "https://i.ytimg.com/vi/gRzQkbXHtPQ/hqdefault.jpg",
+    "link": "https://www.youtube.com/watch?v=gRzQkbXHtPQ"
+  },
+  {
+    "videoId": "vid018",
+    "creator": "Mom, How Do I?",
+    "title": "Mental Health and Self-Care Advice",
+    "description": "Advice on maintaining mental health and practicing self-care.",
+    "image": "https://i.ytimg.com/vi/Tnry7w5dF2M/hqdefault.jpg",
+    "link": "https://www.youtube.com/watch?v=Tnry7w5dF2M"
+  },
+  {
+    "videoId": "vid019",
+    "creator": "Clean My Space",
+    "title": "17 Cleaning Products I Can't Live Without!",
+    "description": "Melissa Maker discusses her must-have cleaning products for every room.",
+    "image": "https://i.ytimg.com/vi/M51rzGgnHrs/hqdefault.jpg",
+    "link": "https://www.youtube.com/watch?v=M51rzGgnHrs"
+  },
+  {
+    "videoId": "vid020",
+    "creator": "Clean My Space",
+    "title": "My Favorite Cleaning Products & Tools!",
+    "description": "A tour of essential cleaning tools and products recommended by Melissa Maker.",
+    "image": "https://i.ytimg.com/vi/8zgf3WvgW-s/hqdefault.jpg",
+    "link": "https://www.youtube.com/watch?v=8zgf3WvgW-s"
+  },
+  {
+    "videoId": "vid021",
+    "creator": "The Domestic Geek",
+    "title": "Weekly Meal Prep for Healthy Eating",
+    "description": "Tips and recipes for preparing meals ahead of time to maintain a healthy diet.",
+    "image": "https://i.ytimg.com/vi/jG4xnTXK-sk/hqdefault.jpg",
+    "link": "https://www.youtube.com/watch?v=jG4xnTXK-sk"
+  },
+  {
+    "videoId": "vid022",
+    "creator": "The Domestic Geek",
+    "title": "Overnight Oatmeal - 5 Delicious Ways!",
+    "description": "Learn five different recipes for making overnight oats.",
+    "image": "https://i.ytimg.com/vi/ddGi1wwAISg/hqdefault.jpg",
+    "link": "https://www.youtube.com/watch?v=ddGi1wwAISg"
+  },
+  {
+    "videoId": "vid023",
+    "creator": "The Financial Diet",
+    "title": "Welcome To The Financial Diet",
+    "description": "An introduction to the channel's mission to make personal finance accessible.",
+    "image": "https://i.ytimg.com/vi/CkkQ5nfWoo0/hqdefault.jpg",
+    "link": "https://www.youtube.com/watch?v=CkkQ5nfWoo0"
+  },
+  {
+    "videoId": "vid024",
+    "creator": "The Financial Diet",
+    "title": "A Conversation About Budgeting ft. The Financial Diet",
+    "description": "Chelsea Fagan discusses budgeting strategies and tips.",
+    "image": "https://i.ytimg.com/vi/PMTHDvChLDA/hqdefault.jpg",
+    "link": "https://www.youtube.com/watch?v=PMTHDvChLDA"
   }
 ]
