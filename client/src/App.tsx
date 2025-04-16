@@ -7,7 +7,7 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { Outlet } from 'react-router-dom';
-import { useMediaQuery } from 'react-responsive';
+// import { useMediaQuery } from 'react-responsive';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -36,16 +36,16 @@ const client = new ApolloClient({
 });
 
 function App() {
-  const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 1024px)' });
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1023px)' });
+  // const isDesktopOrLaptop = useMediaQuery({ query: '(min-width: 1024px)' });
+  // const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1023px)' });
 
   return (
     <ApolloProvider client={client}>
       <div className="flex-column justify-flex-start min-100-vh">
         <Header />
         <div className="container">
-          {isDesktopOrLaptop}
-          {isTabletOrMobile}
+          {/* {isDesktopOrLaptop}
+          {isTabletOrMobile} */}
           <Outlet />
         </div>
         <Footer />
