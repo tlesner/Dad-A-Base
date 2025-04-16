@@ -3,6 +3,6 @@ export interface Video {
     creator: string;
     title: string;
     description: string;
-    image: string;
-    link: string;
+    image?: string;
+    link?: string;
   }
