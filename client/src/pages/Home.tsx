@@ -18,7 +18,7 @@ const Home = () => {
   // };
 
   const filteredVideos = data?.videos?.filter((video: any) =>
-  `${video.title} ${video.description}`.toLowerCase().includes(searchTerm.toLowerCase())
+    (`${video.title ?? ''} ${video.creator ?? ''}`).toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   if (loading) 
