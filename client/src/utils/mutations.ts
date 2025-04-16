@@ -24,13 +24,31 @@ export const ADD_USER = gql`
 	}
 `;
 
+// export const SAVE_VIDEO = gql`
+// 	mutation saveVideo($userId: ID!, $videoURL: String!) {
+// 		saveVideo(videoId: $videoId, videoURL: $videoURL) {
+// 			_id
+// 			username
+// 			email
+// 			password
+// 			savedVideos {
+// 				videoId
+// 				creator
+// 				title
+// 				description
+// 				image
+// 				link
+// 			}
+// 			videoCount
+// 		}
+// 	}
+// `;
+
 export const SAVE_VIDEO = gql`
-	mutation saveVideo($userId: ID!, $videoURL: String!) {
-		saveVideo(videoId: $videoId, videoURL: $videoURL) {
+	mutation saveVideo($video: VideoInput!) {
+		saveVideo(video: $video) {
 			_id
 			username
-			email
-			password
 			savedVideos {
 				videoId
 				creator
@@ -39,7 +57,6 @@ export const SAVE_VIDEO = gql`
 				image
 				link
 			}
-			videoCount
 		}
 	}
 `;
