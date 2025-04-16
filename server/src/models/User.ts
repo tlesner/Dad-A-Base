@@ -6,7 +6,7 @@ import type { VideoDocument } from './Video.js';
 
 // Define an interface for the User document
 export interface UserDocument extends Document {
-  id: string;
+  _id: string;
   username: string;
   email: string;
   password: string;
