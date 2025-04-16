@@ -35,7 +35,7 @@ const VideoModal: React.FC<VideoModalProps> = ({
 			});
 			alert('Video saved!');
 		} catch (err) {
-			console.error(err);
+			console.error('Save video failed: ', err);
 			alert('Failed to save video.');
 		}
 	};
