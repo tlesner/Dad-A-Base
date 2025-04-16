@@ -23,7 +23,7 @@ const VideoModal: React.FC<VideoModalProps> = ({
 		try {
 			await saveVideo({
 				variables: {
-					video: {
+					videoData: {
 						videoId: video.videoId,
 						creator: video.creator,
 						title: video.title,
