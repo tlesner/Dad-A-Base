@@ -45,8 +45,8 @@ export const ADD_USER = gql`
 // `;
 
 export const SAVE_VIDEO = gql`
-	mutation saveVideo($video: VideoInput!) {
-		saveVideo(video: $video) {
+	mutation saveVideo($videoData: VideoSave!) {
+		saveVideo(videoData: $videoData) {
 			_id
 			username
 			savedVideos {
