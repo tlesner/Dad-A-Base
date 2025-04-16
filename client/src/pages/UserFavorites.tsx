@@ -3,7 +3,6 @@
 
 import { Navigate, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
-
 import VideoList from '../components/VideoList';
 
 import { QUERY_USER, QUERY_ME } from '../utils/queries';
@@ -50,7 +49,7 @@ const UserFavorites = () => {
             videos={user.videos}
             title={`${user.username}'s videos...`}
           />
-        </div>
+        </div> 
         {/* {!userParam && (
           <div
             className="col-12 col-md-10 mb-3 p-3"
