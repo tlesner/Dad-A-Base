@@ -32,3 +32,9 @@ jobs:
       # Run lint
       - name: Run Lint
         run: npm run lint
+      
+      # Deploy to Render
+      - name: Trigger Render Deploy
+        if: success() && github.ref == 'refs/heads/main'
+        run: |
+          curl -X POST https://api.render.com/deploy/srv-xxxxxx?key=your_render_api_key
