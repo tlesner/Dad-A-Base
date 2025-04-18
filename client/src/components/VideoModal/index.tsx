@@ -18,9 +18,14 @@ const VideoModal: React.FC<VideoModalProps> = ({
 	video,
 	onClose,
 	isLoggedIn,
-	savedVideos = [],
+	savedVideos,
 }) => {
 	console.log('Video modal: ', video);
+	if (!savedVideos) {
+		savedVideos = [];
+	}
+
+	console.log('Saved Vidoes: ', savedVideos);
 
 	const [isVideoSaved, setIsVideoSaved] = useState(false);
 	console.log('isVideoSaved: ', isVideoSaved);
@@ -113,13 +118,12 @@ const VideoModal: React.FC<VideoModalProps> = ({
 						style={{ margin: '20px 0' }}></iframe>
 				)}
 
-				{isLoggedIn && 
-				<button onClick={isVideoSaved ? handleRemoveSave: handle} ></button>
-					// (isVideoSaved ? (
-					// 	<button onClick={handleRemoveSave}>Unsave Video</button>
-					// ) : (
-					// 	<button onClick={handleSave}>Save Video</button>
-					// ))}
+				{isLoggedIn && (
+					<button
+						onClick={isVideoSaved ? handleRemoveSave : handleSave}>
+						{isVideoSaved ? 'Unsave Video' : 'Save Video'}
+					</button>
+				)}
 				<button onClick={onClose}>Close</button>
 			</div>
 		</div>

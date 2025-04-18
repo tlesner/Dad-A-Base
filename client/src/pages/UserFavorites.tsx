@@ -167,7 +167,7 @@ const UserFavorites = () => {
 					video={selectedVideo}
 					onClose={handleCloseModal}
 					isLoggedIn={Auth.loggedIn()}
-					savedVideos={user.savedVideo}
+					savedVideos={user.savedVideos}
 				/>
 			)}
 		</div>

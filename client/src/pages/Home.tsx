@@ -1,12 +1,29 @@
+import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { useState } from 'react';
 // import VideoList from '../components/VideoList/index.tsx';
-import { QUERY_VIDEOS } from '../utils/queries.ts';
+import { QUERY_VIDEOS, QUERY_USER, QUERY_ME } from '../utils/queries.ts';
 // import { useNavigate } from 'react-router-dom';
 import VideoModal from '../components/VideoModal/index.tsx';
 import Auth from '../utils/auth.ts';
 
+const getUser = () => {
+	const { username: userParam } = useParams();
+
+	const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
+		variables: { username: userParam },
+	});
+
+	const user = data?.me || data?.user || {};
+	if (!loading) return user;
+};
+
 const Home = () => {
+	const user = getUser();
+
+	console.log(" Home ~ user:", user);
+	
+
 	const { loading, data, error } = useQuery(QUERY_VIDEOS);
 
 	const isLoggedIn = Auth.loggedIn();
@@ -151,6 +168,7 @@ const Home = () => {
 					video={selectedVideo}
 					onClose={handleCloseModal}
 					isLoggedIn={isLoggedIn}
+					savedVideos={isLoggedIn ? user.savedVideos : []}
 				/>
 			)}
 		</main>
