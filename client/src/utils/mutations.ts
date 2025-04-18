@@ -60,3 +60,20 @@ export const SAVE_VIDEO = gql`
 		}
 	}
 `;
+
+export const REMOVE_VIDEO = gql`
+	mutation removeVideo($videoId: ID!) {
+		removeVideo(videoId: $videoId) {
+			_id
+			username
+			savedVideos {
+				videoId
+				creator
+				title
+				description
+				image
+				link
+			}
+		}
+	}
+`;
