@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
-import { SAVE_VIDEO } from '../../utils/mutations';
+import { SAVE_VIDEO, REMOVE_VIDEO } from '../../utils/mutations';
+import { QUERY_ME } from '../../utils/queries';
 import { useMutation } from '@apollo/client';
 import { Video } from '../../interfaces/VideoData';
 
@@ -10,14 +11,57 @@ interface VideoModalProps {
 	video: Video;
 	onClose: () => void;
 	isLoggedIn: boolean;
+	savedVideos?: Video[];
 }
 
 const VideoModal: React.FC<VideoModalProps> = ({
 	video,
 	onClose,
 	isLoggedIn,
+	savedVideos,
 }) => {
-	const [saveVideo] = useMutation(SAVE_VIDEO);
+	console.log('Video modal: ', video);
+	if (!savedVideos) {
+		savedVideos = [];
+	}
+
+	console.log('Saved Vidoes: ', savedVideos);
+
+	const [isVideoSaved, setIsVideoSaved] = useState(false);
+	console.log('isVideoSaved: ', isVideoSaved);
+
+	const [savedVideoIds, setSavedVideoIds] = useState<string[]>([]);
+
+	const [saveVideo] = useMutation(SAVE_VIDEO, {
+		refetchQueries: [QUERY_ME, 'me'],
+	});
+
+	const [removeVideo] = useMutation(REMOVE_VIDEO, {
+		refetchQueries: [QUERY_ME, 'me'],
+	});
+
+	// let videoIds: any = [];
+
+	// if (savedVideos.length) {
+	// 	videoIds = savedVideos.map((saved) => saved.videoId);
+	// 	console.log('Updated savedVideoIds: ', videoIds);
+	// }
+
+	// const isVideoSaved = savedVideoIds.includes(video.videoId);
+
+	//Update the videoIds that are saved to the User
+	useEffect(() => {
+		const ids = savedVideos.map((video) => video.videoId);
+		setSavedVideoIds(ids);
+		console.log('Updated savedVideoIds: ', ids);
+	}, [savedVideos]);
+
+	//Check if the current video is already saved or not
+	useEffect(() => {
+		const saved = savedVideoIds.includes(video.videoId);
+		setIsVideoSaved(saved);
+		console.log('Updated isVideoSaved: ', saved);
+	}, [savedVideoIds, video.videoId]);
 
 	const handleSave = async () => {
 		try {
@@ -33,10 +77,27 @@ const VideoModal: React.FC<VideoModalProps> = ({
 					},
 				},
 			});
-			alert('Video saved!');
+			setSavedVideoIds((prev) => [...prev, video.videoId]);
+			// setIsVideoSaved(true);
 		} catch (err) {
 			console.error('Save video failed: ', err);
 			alert('Failed to save video.');
+		}
+	};
+
+	const handleRemoveSave = async () => {
+		try {
+			await removeVideo({
+				variables: {
+					videoId: video.videoId,
+				},
+			});
+			setSavedVideoIds((prev) =>
+				prev.filter((id) => id !== video.videoId)
+			);
+		} catch (err) {
+			console.error('Remove video failed: ', err);
+			alert('Failed to remove video.');
 		}
 	};
 
@@ -57,7 +118,12 @@ const VideoModal: React.FC<VideoModalProps> = ({
 						style={{ margin: '20px 0' }}></iframe>
 				)}
 
-				{isLoggedIn && <button onClick={handleSave}>Save Video</button>}
+				{isLoggedIn && (
+					<button
+						onClick={isVideoSaved ? handleRemoveSave : handleSave}>
+						{isVideoSaved ? 'Unsave Video' : 'Save Video'}
+					</button>
+				)}
 				<button onClick={onClose}>Close</button>
 			</div>
 		</div>
