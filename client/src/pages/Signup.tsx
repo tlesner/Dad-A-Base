@@ -16,8 +16,7 @@ const Signup = () => {
 
 	const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
 		const { name, value } = event.target;
-		console.log('Name: ', name, 'Value: ', value);
-
+		
 		setFormState({
 			...formState,
 			[name]: value,
