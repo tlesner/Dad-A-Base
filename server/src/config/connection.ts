@@ -21,7 +21,7 @@
 import mongoose from 'mongoose';
 
 mongoose.connect(
-	process.env.MONGODB_URI || 'mongodb+srv://tjlesner:B8gvEj90k0fZyspc@cluster0.n2ae8.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/dad-a-base'
+	process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/dad-a-base'
 );
 
 const db = mongoose.connection;
