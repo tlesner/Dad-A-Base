@@ -1,5 +1,5 @@
 # 🛞 Dad-A-Base 🛠️
-Because some kids don’t have someone to ask… so we built a place they could."
+"Because some kids don’t have someone to ask… so we built a place they could."
 
 ## 👔 Description
 
@@ -9,10 +9,13 @@ Ever wondered how to change a tire, tie a tie, or patch a wall without someone a
 This project allows users to test features before deployment. The reason behind this is for users to have a seamless experience while performing certain actions. Being able to go through the database will help minimize errors. This project uses Cypress testing. I was able to learn how to test out components based off existing code. It helped me get more practice in mapping out each step and adding the proper functions accordingly. 
 
 ## Table of Contents 
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
+- [Installation](#installation)  
+- [Usage](#usage)  
+- [Tech Stack](#tech-stack)  
+- [Live Demo Link](#live-demo-link)  
+- [Testing](#-testing)  
+- [Credits](#credits)  
+- [Future Development](#future-development)  
 - [License](#license)
 
 ## Installation
@@ -28,37 +31,51 @@ These will be the following downloads/ installations that will be necessary. For
 - **Deployment**: Render
 
 
+
+
 ## Usage
 
 In order for this project to work properly, you will need to download the libraries onto your local device for use with your code editor. In the code editor, you will open up a terminal and begin installing the node modules. To begin using the application type "npm run build" into the terminal. After this begins you will run "npm run start". This command should begin running the site on your local device. You will also need to install "cypress using command npm install cypress --save-dev".
   
 ## 🙌 Credits
 
-![MIT LICENSE INFO](https://choosealicense.com/licenses/mit/#)
+[![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://choosealicense.com/licenses/mit/)
 
-![Cypress Install](https://stackoverflow.com/questions/75898942/cypress-installation-through-npm-doesnt-work)
+<a href="https://www.cypress.io/">
+  <img alt="Cypress" src="https://www.cypress.io/icons/icon-48x48.png" height="40px" />
+</a>
 
-![Cypress Install](https://www.cypress.io/)
-
- 🤖 **ChatGPT** – For helping us refine code & bad jokes  
+- 🤖 **ChatGPT** – For helping us refine code & bad jokes  
 - 🧑‍🏫 **Xpert Learning** – For guidance, support, and "wait, try this instead..." moments  
+- 🧪 [Cypress Installation Troubleshooting](https://stackoverflow.com/questions/75898942/cypress-installation-through-npm-doesnt-work)  
 - 📺 **Amazing YouTube Creators** – For making the world a little less confusing, one how-to at a time:
-  - [Dad, How Do I?](https://www.youtube.com/@DadhowdoI)
-  - [Mom, How Do I?](https://www.youtube.com/@momhowdoi4105)
-  - [How to Dad](https://www.youtube.com/@HowtoDad)
-  - [Clean My Space](https://www.youtube.com/@cleanmyspace)
-  - [The Financial Diet](https://www.youtube.com/@thefinancialdiet)
+  - [Dad, How Do I?](https://www.youtube.com/@DadhowdoI)  
+  - [Mom, How Do I?](https://www.youtube.com/@momhowdoi4105)  
+  - [How to Dad](https://www.youtube.com/@HowtoDad)  
+  - [Clean My Space](https://www.youtube.com/@cleanmyspace)  
+  - [The Financial Diet](https://www.youtube.com/@thefinancialdiet)  
   - [Learn How to Adult](https://www.youtube.com/@learnhowtoadult)
+  ---
 
 ## Live Demo Link
+Check out the deployed application here:  
+🔗 [https://dad-a-base.onrender.com/](https://dad-a-base.onrender.com/)
+---
+## 🧪 Testing 
+- Login and authentication behavior  
+- Video browsing and bookmarking  
+- Modal rendering and closing  
+- Navigation between pages  
+- Favorites functionality
 
+We also recommend writing additional tests for edge cases like token expiration or API errors
+---
 ## Future Development
 
-- 💬 **Comments & Reactions**  
-  Let kids leave feedback on videos (thumbs up, emojis, or “this helped!” notes).
-  
-  - 🎮 **Mini Quizzes or Challenges**  
-  Test what the user learned after watching a video — fun and educational!
+
+- 💬 **Comments & Reactions** – Kids can leave feedback using emojis or “this helped!”  
+- 🎮 **Mini Quizzes** – Reinforce learning with fun post-video questions  
+- 🧠 **Progress Tracking** – Help users remember what they’ve learned  
 
 
 

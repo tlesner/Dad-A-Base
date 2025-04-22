@@ -55,11 +55,11 @@ const resolvers = {
 				throw new AuthenticationError('Not authenticated');
 			}
 			try {
-				console.log('Fetching user with ID:', context.user._id);
+				// console.log('Fetching user with ID:', context.user._id);
 				const user = User.findById(context.user._id).populate(
 					'savedVideos'
 				);
-				console.log('Fetched me query user:', user);
+				// console.log('Fetched me query user:', user);
 				return user;
 			} catch (error) {
 				console.error('Failed to fetch user data:', error);
