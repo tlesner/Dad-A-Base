@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import { SAVE_VIDEO, REMOVE_VIDEO } from '../../utils/mutations';
+import { UPDATE_VIDEO, REMOVE_VIDEO } from '../../utils/mutations';
 import { QUERY_ME } from '../../utils/queries';
 import { useMutation } from '@apollo/client';
 import { Video } from '../../interfaces/VideoData';
@@ -32,7 +32,7 @@ const VideoModal: React.FC<VideoModalProps> = ({
 
 	const [savedVideoIds, setSavedVideoIds] = useState<string[]>([]);
 
-	const [saveVideo] = useMutation(SAVE_VIDEO, {
+	const [saveVideo] = useMutation(UPDATE_VIDEO, {
 		refetchQueries: [QUERY_ME, 'me'],
 	});
 
