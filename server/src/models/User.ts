@@ -34,7 +34,7 @@ const userSchema = new Schema<UserDocument>(
       required: true,
       minlength: 5,
     },
-    // set savedBooks to be an array of data that adheres to the bookSchema
+    // set savedVideos to be an array of data that adheres to the videoSchema
     savedVideos: [videoSchema],
   },
   // set this to use virtual below
@@ -63,7 +63,7 @@ userSchema.methods.isCorrectPassword = async function (password: string): Promis
   return bcrypt.compare(password, this.password);
 };
 
-// when we query a user, we'll also get another field called `bookCount` with the number of saved books we have
+// when we query a user, we'll also get another field called `videoCount` with the number of saved books we have
 userSchema.virtual('videoCount').get(function () {
   return this.savedVideos.length;
 });

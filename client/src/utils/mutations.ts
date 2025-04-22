@@ -24,26 +24,7 @@ export const ADD_USER = gql`
 	}
 `;
 
-// export const SAVE_VIDEO = gql`
-// 	mutation saveVideo($userId: ID!, $videoURL: String!) {
-// 		saveVideo(videoId: $videoId, videoURL: $videoURL) {
-// 			_id
-// 			username
-// 			email
-// 			password
-// 			savedVideos {
-// 				videoId
-// 				creator
-// 				title
-// 				description
-// 				image
-// 				link
-// 			}
-// 			videoCount
-// 		}
-// 	}
-// `;
-
+// To update the user's savedVideos array
 export const UPDATE_VIDEO = gql`
 	mutation updateFavoriteVideo($videoData: VideoSave!) {
 		updateFavoriteVideo(videoData: $videoData) {
@@ -61,6 +42,7 @@ export const UPDATE_VIDEO = gql`
 	}
 `;
 
+// To remove a video from the user's savedVideos array
 export const REMOVE_VIDEO = gql`
 	mutation removeVideo($videoId: ID!) {
 		removeVideo(videoId: $videoId) {
