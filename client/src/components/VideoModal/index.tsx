@@ -40,15 +40,6 @@ const VideoModal: React.FC<VideoModalProps> = ({
 		refetchQueries: [QUERY_ME, 'me'],
 	});
 
-	// let videoIds: any = [];
-
-	// if (savedVideos.length) {
-	// 	videoIds = savedVideos.map((saved) => saved.videoId);
-	// 	console.log('Updated savedVideoIds: ', videoIds);
-	// }
-
-	// const isVideoSaved = savedVideoIds.includes(video.videoId);
-
 	//Update the videoIds that are saved to the User
 	useEffect(() => {
 		const ids = savedVideos.map((video) => video.videoId);
@@ -63,6 +54,7 @@ const VideoModal: React.FC<VideoModalProps> = ({
 		console.log('Updated isVideoSaved: ', saved);
 	}, [savedVideoIds, video.videoId]);
 
+	// When you click 'Save Video button'
 	const handleSave = async () => {
 		try {
 			await saveVideo({
@@ -78,13 +70,13 @@ const VideoModal: React.FC<VideoModalProps> = ({
 				},
 			});
 			setSavedVideoIds((prev) => [...prev, video.videoId]);
-			// setIsVideoSaved(true);
 		} catch (err) {
 			console.error('Save video failed: ', err);
 			alert('Failed to save video.');
 		}
 	};
 
+	// When you click 'Unsave Video button'
 	const handleRemoveSave = async () => {
 		try {
 			await removeVideo({
