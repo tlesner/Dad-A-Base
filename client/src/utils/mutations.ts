@@ -44,9 +44,9 @@ export const ADD_USER = gql`
 // 	}
 // `;
 
-export const SAVE_VIDEO = gql`
-	mutation saveVideo($videoData: VideoSave!) {
-		saveVideo(videoData: $videoData) {
+export const UPDATE_VIDEO = gql`
+	mutation updateFavoriteVideo($videoData: VideoSave!) {
+		updateFavoriteVideo(videoData: $videoData) {
 			_id
 			username
 			savedVideos {
