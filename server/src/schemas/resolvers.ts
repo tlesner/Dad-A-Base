@@ -115,7 +115,7 @@ const resolvers = {
 			}
 		},
 
-		saveVideo: async (
+		updateFavoriteVideo: async (
 			_parent: any,
 			{ videoData }: SaveVideoArgs,
 			context: IUserContext
