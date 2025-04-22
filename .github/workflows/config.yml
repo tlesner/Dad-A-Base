@@ -1,0 +1,24 @@
+name: Deploy To Render
+
+on:
+  # push:
+  #   branches: [main]
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  ci:
+    name: Deploy To Render
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test
+        run: |
+          npm install
+
+      - name: Deploy
+        env:
+          deploy_url: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+        run: |
+          curl "$deploy_url"
