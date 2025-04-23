@@ -16,12 +16,6 @@ interface LoginArgs {
 	password: string;
 }
 
-// interface RegisterArgs {
-//   username: string;
-//   email: string;
-//   password: string;
-// }
-
 interface SaveVideoArgs {
 	videoData: {
 		videoId: string;
